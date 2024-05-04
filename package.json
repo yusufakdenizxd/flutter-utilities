@@ -12,12 +12,78 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "javascriptangular",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "typescriptangular",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "css",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "vue",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "vue-html",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "vue-template",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "vue-ts",
+        "path": "./regex.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "./regex.code-snippets"
+      }
+    ],
     "commands": [
       {
-        "command": "flutter-utilities.helloWorld",
-        "title": "Hello World"
+        "command": "extension.createFeature",
+        "title": "Flutter Utilities: Create new Feature"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.createFeature",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -28,14 +94,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.87.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.6",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
   }
 }
